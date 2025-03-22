@@ -1,7 +1,6 @@
 import {Socket} from 'socket.io-client';
 import {useEffect, useState} from 'react';
 import ScrollToBottom from 'react-scroll-to-bottom';
-import IconSendFill from './IconSendFill.tsx';
 
 
 interface Props {
@@ -89,10 +88,7 @@ const Chat = ({socket, room, username}: Props) => {
                     onKeyDown={(e) => e.key === "Enter" && sendMessage()}
                     className="outline-none bg-transparent flex-1"
                 />
-                <IconSendFill
-                    onClick={sendMessage}
-                    className="cursor-pointer w-5 h-5 hover:text-white/70"
-                />
+
             </div>
         </div>
     );
